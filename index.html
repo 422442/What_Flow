@@ -1,0 +1,2065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What's Up? - Workflow Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-container">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+        <div class="gradient-orb orb-4"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-icon">🎬</span>
+                <span class="logo-text">What's Up?</span>
+            </div>
+            <div class="nav-links">
+                <a href="#overview" class="nav-link">Overview</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#data-files" class="nav-link">Data</a>
+                <a href="#scripts" class="nav-link">Scripts</a>
+                <a href="#workflows" class="nav-link">Workflows</a>
+                <a href="#apis" class="nav-link">APIs</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav">
+        <a href="#overview" class="mobile-nav-link">Overview</a>
+        <a href="#architecture" class="mobile-nav-link">Architecture</a>
+        <a href="#data-files" class="mobile-nav-link">Data</a>
+        <a href="#scripts" class="mobile-nav-link">Scripts</a>
+        <a href="#workflows" class="mobile-nav-link">Workflows</a>
+        <a href="#apis" class="mobile-nav-link">APIs</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-section" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge glass-card-mini">
+                <span class="pulse-dot"></span>
+                <span>Fully Autonomous</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">What's Up?</span>
+                <span class="title-subtitle">Autonomous Philosophical Media Blog Engine</span>
+            </h1>
+            <p class="hero-description">
+                A fully automated, AI-powered philosophical cinema blog that generates 
+                <strong>25 posts per week</strong> with zero manual intervention.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-card glass-card">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Posts/Day</span>
+                    <span class="stat-detail">Mon-Sat</span>
+                </div>
+                <div class="stat-card glass-card">
+                    <span class="stat-number">1</span>
+                    <span class="stat-label">Weekly Recap</span>
+                    <span class="stat-detail">Sundays</span>
+                </div>
+                <div class="stat-card glass-card">
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">Posts/Week</span>
+                    <span class="stat-detail">Total Output</span>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>Scroll to explore</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Section 1: Project Overview -->
+        <section class="section" id="overview">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">Project Overview</h2>
+                <p class="section-subtitle">Understanding the autonomous blog engine</p>
+            </div>
+
+            <div class="overview-grid">
+                <div class="glass-card feature-card" data-aos="fade-up">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI-Powered Content</h3>
+                    <p>Google Gemini 2.5 Flash generates rich, philosophical analysis posts with unique insights for every movie and series.</p>
+                </div>
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">🎬</div>
+                    <h3>TMDB Integration</h3>
+                    <p>Automatically fetches movie/series data, cast info, and high-quality backdrop images from The Movie Database.</p>
+                </div>
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">⚡</div>
+                    <h3>GitHub Actions</h3>
+                    <p>Scheduled workflows run twice daily, handling everything from content generation to deployment.</p>
+                </div>
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">🖼️</div>
+                    <h3>Image Processing</h3>
+                    <p>All images are automatically processed to optimized WebP format with intelligent compression.</p>
+                </div>
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">📧</div>
+                    <h3>Backup System</h3>
+                    <p>Automated backups every 3 days via email, with smart compression and split archives for large files.</p>
+                </div>
+                <div class="glass-card feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Jekyll Deployment</h3>
+                    <p>Automatic build and deploy to GitHub Pages whenever new content is pushed to the repository.</p>
+                </div>
+            </div>
+
+            <!-- Technology Stack -->
+            <div class="tech-stack-container" data-aos="fade-up">
+                <h3 class="subsection-title">Technology Stack</h3>
+                <div class="tech-stack">
+                    <div class="tech-item glass-card-mini">
+                        <span class="tech-icon">💎</span>
+                        <span class="tech-name">Jekyll</span>
+                        <span class="tech-desc">Static Site</span>
+                    </div>
+                    <div class="tech-item glass-card-mini">
+                        <span class="tech-icon">🐙</span>
+                        <span class="tech-name">GitHub Pages</span>
+                        <span class="tech-desc">Hosting</span>
+                    </div>
+                    <div class="tech-item glass-card-mini">
+                        <span class="tech-icon">⚙️</span>
+                        <span class="tech-name">GitHub Actions</span>
+                        <span class="tech-desc">Automation</span>
+                    </div>
+                    <div class="tech-item glass-card-mini">
+                        <span class="tech-icon">🧠</span>
+                        <span class="tech-name">Gemini 2.5</span>
+                        <span class="tech-desc">AI Content</span>
+                    </div>
+                    <div class="tech-item glass-card-mini">
+                        <span class="tech-icon">🎞️</span>
+                        <span class="tech-name">TMDB API</span>
+                        <span class="tech-desc">Movie Data</span>
+                    </div>
+                    <div class="tech-item glass-card-mini">
+                        <span class="tech-icon">📸</span>
+                        <span class="tech-name">Unsplash</span>
+                        <span class="tech-desc">Recap Images</span>
+                    </div>
+                    <div class="tech-item glass-card-mini">
+                        <span class="tech-icon">✈️</span>
+                        <span class="tech-name">Telegram</span>
+                        <span class="tech-desc">Notifications</span>
+                    </div>
+                    <div class="tech-item glass-card-mini">
+                        <span class="tech-icon">🐍</span>
+                        <span class="tech-name">Python 3.11</span>
+                        <span class="tech-desc">Core Language</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Weekly Output Table -->
+            <div class="weekly-output glass-card" data-aos="fade-up">
+                <h3 class="card-title">📅 Weekly Output Schedule</h3>
+                <div class="schedule-table">
+                    <div class="schedule-row header">
+                        <span>Day</span>
+                        <span>Posts</span>
+                        <span>Type</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="day">Monday - Saturday</span>
+                        <span class="posts">4 posts/day</span>
+                        <span class="type">2 movies + 2 series (or 4 movies)</span>
+                    </div>
+                    <div class="schedule-row">
+                        <span class="day">Sunday</span>
+                        <span class="posts">1 post</span>
+                        <span class="type">Weekly philosophical recap</span>
+                    </div>
+                    <div class="schedule-row total">
+                        <span class="day">Total</span>
+                        <span class="posts">25 posts/week</span>
+                        <span class="type">Fully automated</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: System Architecture -->
+        <section class="section" id="architecture">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">System Architecture</h2>
+                <p class="section-subtitle">High-level flow of the automation system</p>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="architecture-container" data-aos="fade-up">
+                <div class="arch-flow">
+                    <!-- GitHub Actions Triggers -->
+                    <div class="arch-block triggers glass-card">
+                        <div class="arch-block-header">
+                            <span class="arch-icon">⏰</span>
+                            <h4>GitHub Actions Triggers</h4>
+                        </div>
+                        <div class="arch-block-content">
+                            <div class="trigger-item">
+                                <code>0 3 * * *</code>
+                                <span>~08:30 AM IST daily</span>
+                            </div>
+                            <div class="trigger-item">
+                                <code>0 12 * * 1-6</code>
+                                <span>~05:30 PM IST Mon-Sat</span>
+                            </div>
+                            <div class="trigger-item">
+                                <code>0 6 */3 * *</code>
+                                <span>~11:30 AM IST (backup)</span>
+                            </div>
+                            <div class="trigger-item">
+                                <code>push to main</code>
+                                <span>Jekyll build & deploy</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector vertical">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow">▼</div>
+                    </div>
+
+                    <!-- Main.py Execution -->
+                    <div class="arch-block main-execution glass-card">
+                        <div class="arch-block-header">
+                            <span class="arch-icon">🐍</span>
+                            <h4>main.py Execution</h4>
+                        </div>
+                        <div class="execution-steps">
+                            <div class="step-row">
+                                <div class="exec-step glass-card-mini" data-step="1">
+                                    <span class="step-num">1</span>
+                                    <span class="step-name">VALIDATE</span>
+                                    <span class="step-desc">Environment</span>
+                                </div>
+                                <div class="step-arrow">→</div>
+                                <div class="exec-step glass-card-mini" data-step="2">
+                                    <span class="step-num">2</span>
+                                    <span class="step-name">SELECT</span>
+                                    <span class="step-desc">Items from CSV</span>
+                                </div>
+                                <div class="step-arrow">→</div>
+                                <div class="exec-step glass-card-mini" data-step="3">
+                                    <span class="step-num">3</span>
+                                    <span class="step-name">FETCH</span>
+                                    <span class="step-desc">TMDB Data</span>
+                                </div>
+                            </div>
+                            <div class="step-row reverse">
+                                <div class="exec-step glass-card-mini" data-step="6">
+                                    <span class="step-num">6</span>
+                                    <span class="step-name">SAVE</span>
+                                    <span class="step-desc">Post & Update</span>
+                                </div>
+                                <div class="step-arrow">←</div>
+                                <div class="exec-step glass-card-mini" data-step="5">
+                                    <span class="step-num">5</span>
+                                    <span class="step-name">GENERATE</span>
+                                    <span class="step-desc">Gemini Content</span>
+                                </div>
+                                <div class="step-arrow">←</div>
+                                <div class="exec-step glass-card-mini" data-step="4">
+                                    <span class="step-num">4</span>
+                                    <span class="step-name">DOWNLOAD</span>
+                                    <span class="step-desc">Process Images</span>
+                                </div>
+                            </div>
+                            <div class="step-row">
+                                <div class="exec-step glass-card-mini" data-step="7">
+                                    <span class="step-num">7</span>
+                                    <span class="step-name">REMOVE</span>
+                                    <span class="step-desc">From CSV</span>
+                                </div>
+                                <div class="step-arrow">→</div>
+                                <div class="exec-step glass-card-mini" data-step="8">
+                                    <span class="step-num">8</span>
+                                    <span class="step-name">PRE-CHECK</span>
+                                    <span class="step-desc">Next Items</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector vertical">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow">▼</div>
+                    </div>
+
+                    <!-- Git Operations -->
+                    <div class="arch-block git-ops glass-card">
+                        <div class="arch-block-header">
+                            <span class="arch-icon">📤</span>
+                            <h4>Git Commit & Push</h4>
+                        </div>
+                        <div class="arch-block-content">
+                            <ul class="git-list">
+                                <li>Commits new posts, images, updated data files</li>
+                                <li>Pushes to main branch</li>
+                                <li>Triggers pages-deploy.yml workflow</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flow-connector vertical">
+                        <div class="connector-line"></div>
+                        <div class="connector-arrow">▼</div>
+                    </div>
+
+                    <!-- Jekyll Deploy -->
+                    <div class="arch-block deploy glass-card">
+                        <div class="arch-block-header">
+                            <span class="arch-icon">🚀</span>
+                            <h4>Jekyll Build & Deploy</h4>
+                        </div>
+                        <div class="arch-block-content">
+                            <ul class="deploy-list">
+                                <li>Builds static site with Jekyll</li>
+                                <li>Deploys to GitHub Pages</li>
+                                <li class="highlight">✨ Site is live!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Data Files -->
+        <section class="section" id="data-files">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">Data Files Deep Dive</h2>
+                <p class="section-subtitle">Core data structures powering the automation</p>
+            </div>
+
+            <div class="data-files-grid">
+                <!-- movies.csv -->
+                <div class="data-file-card glass-card expandable" data-aos="fade-up">
+                    <div class="data-file-header">
+                        <div class="file-icon">📄</div>
+                        <div class="file-info">
+                            <h4>movies.csv</h4>
+                            <span class="file-path">data/movies.csv</span>
+                        </div>
+                        <div class="file-count">543 movies</div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <div class="data-file-content">
+                        <p class="file-purpose">Source list of movies to process (IMDb export format)</p>
+                        <div class="file-structure">
+                            <h5>Key Columns Used:</h5>
+                            <table class="mini-table">
+                                <tr><td><code>Const</code></td><td>IMDb ID (unique identifier)</td><td>tt2488496</td></tr>
+                                <tr><td><code>Title</code></td><td>Movie title</td><td>Star Wars: Episode VII</td></tr>
+                                <tr><td><code>Year</code></td><td>Release year</td><td>2015</td></tr>
+                                <tr><td><code>Genres</code></td><td>Genre list</td><td>Action, Adventure, Sci-Fi</td></tr>
+                                <tr><td><code>Directors</code></td><td>Director name(s)</td><td>J.J. Abrams</td></tr>
+                                <tr><td><code>Runtime</code></td><td>Duration</td><td>138 mins</td></tr>
+                            </table>
+                        </div>
+                        <div class="file-behavior">
+                            <h5>Behavior:</h5>
+                            <ul>
+                                <li>Items are <strong>randomly selected</strong> (not sequential)</li>
+                                <li>After processing, item is <strong>removed</strong> from CSV</li>
+                                <li>Backup created at <code>movies.backup.csv</code> before each run</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- series.csv -->
+                <div class="data-file-card glass-card expandable" data-aos="fade-up" data-aos-delay="100">
+                    <div class="data-file-header">
+                        <div class="file-icon">📺</div>
+                        <div class="file-info">
+                            <h4>series.csv</h4>
+                            <span class="file-path">data/series.csv</span>
+                        </div>
+                        <div class="file-count">~100 series</div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <div class="data-file-content">
+                        <p class="file-purpose">Source list of TV series to process (IMDb export format)</p>
+                        <div class="file-behavior">
+                            <h5>Depletion Handling:</h5>
+                            <div class="code-block">
+                                <code>if available_series.empty:</code><br>
+                                <code>&nbsp;&nbsp;print("⚠️ No more series - selecting 2nd movie!")</code><br>
+                                <code>&nbsp;&nbsp;# Select a second movie instead of series</code>
+                            </div>
+                            <p class="note">When series.csv becomes empty, the system switches to <strong>double movie mode</strong> (processes 2 movies instead of 1 movie + 1 series)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- metadata_db.json -->
+                <div class="data-file-card glass-card expandable" data-aos="fade-up" data-aos-delay="200">
+                    <div class="data-file-header">
+                        <div class="file-icon">📊</div>
+                        <div class="file-info">
+                            <h4>metadata_db.json</h4>
+                            <span class="file-path">data/metadata_db.json</span>
+                        </div>
+                        <div class="file-count">Last 100 entries</div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <div class="data-file-content">
+                        <p class="file-purpose">Tracks all generated posts for weekly recaps and analytics</p>
+                        <div class="json-preview">
+                            <pre>{
+  "posts": [
+    {
+      "imdb_id": "tt3748528",
+      "title": "Rogue One: A Star Wars Story",
+      "moods": ["Existential", "Heroic", "Melancholy"],
+      "url": "/posts/rogue-one-a-star-wars-story/",
+      "date": "2026-02-02T09:20:48.983494"
+    }
+  ]
+}</pre>
+                        </div>
+                        <div class="file-fields">
+                            <h5>Fields:</h5>
+                            <ul>
+                                <li><code>imdb_id</code> - IMDb identifier</li>
+                                <li><code>title</code> - Movie/series title</li>
+                                <li><code>moods</code> - 3 mood tags extracted from content</li>
+                                <li><code>url</code> - Jekyll post URL</li>
+                                <li><code>date</code> - ISO timestamp of generation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- processing_queue.json -->
+                <div class="data-file-card glass-card expandable" data-aos="fade-up" data-aos-delay="300">
+                    <div class="data-file-header">
+                        <div class="file-icon">📋</div>
+                        <div class="file-info">
+                            <h4>processing_queue.json</h4>
+                            <span class="file-path">data/processing_queue.json</span>
+                        </div>
+                        <div class="file-count">Pre-validated</div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <div class="data-file-content">
+                        <p class="file-purpose">Stores pre-validated items for next run (image availability confirmed)</p>
+                        <div class="queue-flow">
+                            <div class="queue-step">
+                                <span class="q-num">1</span>
+                                <span>At end of each run, system selects <strong>next</strong> items</span>
+                            </div>
+                            <div class="queue-step">
+                                <span class="q-num">2</span>
+                                <span>Checks if TMDB has high-quality images (≥1920px)</span>
+                            </div>
+                            <div class="queue-step">
+                                <span class="q-num">3</span>
+                                <span>If images available → saves to queue</span>
+                            </div>
+                            <div class="queue-step">
+                                <span class="q-num">4</span>
+                                <span>Next run uses queued items (already validated)</span>
+                            </div>
+                        </div>
+                        <div class="benefits">
+                            <h5>Benefits:</h5>
+                            <ul>
+                                <li>⚡ Faster processing (no duplicate image checks)</li>
+                                <li>🔔 Early warning for missing images</li>
+                                <li>📧 Telegram/email alerts sent in advance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- used_images.json -->
+                <div class="data-file-card glass-card expandable" data-aos="fade-up" data-aos-delay="400">
+                    <div class="data-file-header">
+                        <div class="file-icon">🖼️</div>
+                        <div class="file-info">
+                            <h4>used_images.json</h4>
+                            <span class="file-path">data/used_images.json</span>
+                        </div>
+                        <div class="file-count">Deduplication</div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <div class="data-file-content">
+                        <p class="file-purpose">Tracks all TMDB image paths ever used to ensure uniqueness</p>
+                        <div class="uniqueness-flow">
+                            <h5>How Uniqueness Works:</h5>
+                            <ol>
+                                <li>When downloading images, load this file</li>
+                                <li>Filter out already-used paths from TMDB backdrops</li>
+                                <li>Select from remaining unused images</li>
+                                <li>After saving, add new paths to this file</li>
+                            </ol>
+                        </div>
+                        <div class="filters">
+                            <h5>Additional Filters:</h5>
+                            <ul>
+                                <li><strong>Landscape preference:</strong> <code>aspect_ratio > 1.5</code></li>
+                                <li><strong>Text-free preference:</strong> <code>iso_639_1 is None</code></li>
+                                <li><strong>Quality sorting:</strong> <code>vote_average * width</code></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- history.log -->
+                <div class="data-file-card glass-card expandable" data-aos="fade-up" data-aos-delay="500">
+                    <div class="data-file-header">
+                        <div class="file-icon">📜</div>
+                        <div class="file-info">
+                            <h4>history.log</h4>
+                            <span class="file-path">data/history.log</span>
+                        </div>
+                        <div class="file-count">Permanent log</div>
+                        <button class="expand-btn" aria-label="Expand">
+                            <span class="expand-icon">+</span>
+                        </button>
+                    </div>
+                    <div class="data-file-content">
+                        <p class="file-purpose">Permanent log of all processed items</p>
+                        <div class="log-format">
+                            <h5>Format:</h5>
+                            <pre># What's Up? Processing History
+# Format: IMDB_ID  # Title - Date
+tt3748528  # Rogue One - 2026-02-02 09:20
+tt0944947  # Game of Thrones - 2026-02-02 09:21
+recap_w6_2026  # Weekly Recap - Week 6</pre>
+                        </div>
+                        <div class="log-uses">
+                            <h5>Uses:</h5>
+                            <ul>
+                                <li>Prevents re-processing of same items</li>
+                                <li>Source for weekly recap (extracts posts from current week)</li>
+                                <li>Audit trail</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Core Python Scripts -->
+        <section class="section" id="scripts">
+            <div class="section-header">
+                <span class="section-number">04</span>
+                <h2 class="section-title">Core Python Scripts</h2>
+                <p class="section-subtitle">The heart of the automation system</p>
+            </div>
+
+            <!-- main.py -->
+            <div class="script-container" data-aos="fade-up">
+                <div class="script-header glass-card">
+                    <div class="script-icon">🐍</div>
+                    <div class="script-info">
+                        <h3>main.py</h3>
+                        <span class="script-lines">2,478 lines</span>
+                    </div>
+                    <div class="script-badge">Core Engine</div>
+                </div>
+
+                <div class="script-sections">
+                    <!-- Configuration -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">⚙️</span>
+                            <h4>Configuration Section</h4>
+                            <span class="line-range">Lines 1-80</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="config-grid">
+                                <div class="config-group">
+                                    <h5>API Keys (Environment Variables)</h5>
+                                    <ul class="config-list">
+                                        <li><code>GEMINI_API_KEY</code></li>
+                                        <li><code>TMDB_API_KEY</code></li>
+                                        <li><code>UNSPLASH_ACCESS_KEY</code></li>
+                                        <li><code>TELEGRAM_BOT_TOKEN</code></li>
+                                        <li><code>TELEGRAM_CHAT_ID</code></li>
+                                        <li><code>SMTP_EMAIL / SMTP_PASSWORD</code></li>
+                                    </ul>
+                                </div>
+                                <div class="config-group">
+                                    <h5>Image Configuration</h5>
+                                    <ul class="config-list">
+                                        <li><code>HERO_MAX_SIZE_KB = 500</code></li>
+                                        <li><code>HERO_TARGET_WIDTH = 1920</code></li>
+                                        <li><code>BODY_MAX_SIZE_KB = 300</code></li>
+                                        <li><code>BODY_TARGET_WIDTH = 1280</code></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Validation Functions -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">✅</span>
+                            <h4>Validation Functions</h4>
+                            <span class="line-range">Lines 81-130</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="function-list">
+                                <div class="function-item">
+                                    <code>validate_environment()</code>
+                                    <p>Checks required env vars: GEMINI_API_KEY, TMDB_API_KEY. Warns about optional vars. Exits with error if required vars missing.</p>
+                                </div>
+                                <div class="function-item">
+                                    <code>validate_csv_files()</code>
+                                    <p>Verifies movies.csv and series.csv exist. Checks for required columns: Const, Title, Year. Prints item count.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CSV & History Management -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">📁</span>
+                            <h4>CSV & History Management</h4>
+                            <span class="line-range">Lines 131-250</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="function-list">
+                                <div class="function-item">
+                                    <code>backup_csv_files()</code>
+                                    <p>Creates .backup.csv files before processing to prevent data loss.</p>
+                                </div>
+                                <div class="function-item">
+                                    <code>remove_from_csv(imdb_id, media_type)</code>
+                                    <p>After processing, removes item from CSV to prevent re-selection.</p>
+                                </div>
+                                <div class="function-item">
+                                    <code>load_history()</code>
+                                    <p>Reads history.log file. Returns set of processed IMDb IDs.</p>
+                                </div>
+                                <div class="function-item">
+                                    <code>save_to_history(imdb_id, title)</code>
+                                    <p>Appends new entry with timestamp to history.log.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sunday Detection -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">📅</span>
+                            <h4>Sunday Detection</h4>
+                            <span class="line-range">Lines 251-290</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="code-block">
+                                <pre>def is_sunday():
+    trigger = os.getenv('TRIGGER_SCHEDULE', '').strip()
+    
+    # Cron-based detection (authoritative on CI)
+    if trigger == '0 14 * * 0':   # Sunday cron
+        return True
+    if trigger == '0 12 * * 1-6': # Mon-Sat cron
+        return False
+    
+    # Fallback: day-of-week check
+    return datetime.now().weekday() == 6</pre>
+                            </div>
+                            <p class="note">Uses TRIGGER_SCHEDULE env var from GitHub Actions. Falls back to system date for manual runs.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item Selection -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">🎯</span>
+                            <h4>Item Selection</h4>
+                            <span class="line-range">Lines 291-420</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="selection-flow">
+                                <div class="sel-step">
+                                    <span class="sel-num">1</span>
+                                    <div class="sel-content">
+                                        <strong>Load processing queue from previous run</strong>
+                                        <p>Queue exists? → Use queued items (already validated)<br>No queue? → Select new items</p>
+                                    </div>
+                                </div>
+                                <div class="sel-step">
+                                    <span class="sel-num">2</span>
+                                    <div class="sel-content">
+                                        <strong>Load both CSV files</strong>
+                                        <p>Filter out already-processed items (from history). Count available items.</p>
+                                    </div>
+                                </div>
+                                <div class="sel-step">
+                                    <span class="sel-num">3</span>
+                                    <div class="sel-content">
+                                        <strong>Random selection strategy</strong>
+                                        <p>Pick 1 random movie + 1 random series (or 2nd movie if series depleted) + queue next items</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TMDB API Integration -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">🎬</span>
+                            <h4>TMDB API Integration</h4>
+                            <span class="line-range">Lines 421-600</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="api-flow">
+                                <div class="api-step">
+                                    <strong>Step 1:</strong> Find TMDB ID from IMDb ID
+                                    <code>GET /find/{imdb_id}?external_source=imdb_id</code>
+                                </div>
+                                <div class="api-step">
+                                    <strong>Step 2:</strong> Detect media type (movie or TV)
+                                    <code>movie_results → 'movie' | tv_results → 'tv'</code>
+                                </div>
+                                <div class="api-step">
+                                    <strong>Step 3:</strong> Fetch full details
+                                    <code>GET /{media_type}/{tmdb_id}?append_to_response=images,credits,watch/providers</code>
+                                </div>
+                            </div>
+                            <div class="data-retrieved">
+                                <h5>Data Retrieved:</h5>
+                                <ul>
+                                    <li>Overview/plot summary</li>
+                                    <li>Cast list</li>
+                                    <li>Backdrop images (sorted by quality)</li>
+                                    <li>Streaming providers</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image Processing -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">🖼️</span>
+                            <h4>Image Processing</h4>
+                            <span class="line-range">Lines 601-900</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="function-list">
+                                <div class="function-item">
+                                    <code>download_image(url, timeout=60)</code>
+                                    <p>Simple HTTP GET for image bytes. Returns raw image data or None.</p>
+                                </div>
+                                <div class="function-item">
+                                    <code>process_and_save_image()</code>
+                                    <div class="process-steps">
+                                        <span>1. Open with PIL</span>
+                                        <span>→</span>
+                                        <span>2. Convert to RGB</span>
+                                        <span>→</span>
+                                        <span>3. Resize to target width</span>
+                                        <span>→</span>
+                                        <span>4. Compress iteratively</span>
+                                        <span>→</span>
+                                        <span>5. Save as WebP</span>
+                                    </div>
+                                </div>
+                                <div class="function-item">
+                                    <code>download_and_process_images()</code>
+                                    <p>Handles deduplication, downloads hero + 3 body images with diversity algorithm.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gemini AI Content Generation -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">🧠</span>
+                            <h4>Gemini AI Content Generation</h4>
+                            <span class="line-range">Lines 1251-1800</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="prompt-structure">
+                                <h5>Prompt Structure:</h5>
+                                <div class="prompt-sections">
+                                    <div class="prompt-item">📋 <strong>METADATA</strong> - Title, Year, Type, Genres, Director, Runtime</div>
+                                    <div class="prompt-item">🎬 <strong>TMDB DATA</strong> - Cast, Plot Overview</div>
+                                    <div class="prompt-item">🔍 <strong>WEB SEARCH</strong> - Real critic reviews, balanced feedback</div>
+                                    <div class="prompt-item">🖼️ <strong>IMAGE PLACEHOLDERS</strong> - [IMAGE_1], [IMAGE_2], [IMAGE_3]</div>
+                                    <div class="prompt-item">✨ <strong>FORMATTING</strong> - Rich markdown, blockquotes with prompt styles</div>
+                                    <div class="prompt-item">📝 <strong>STRUCTURE</strong> - Opening quote, sections, closing thought</div>
+                                </div>
+                            </div>
+                            <div class="gen-settings">
+                                <h5>Generation Settings:</h5>
+                                <ul>
+                                    <li><code>temperature=0.85</code> - Creative but coherent</li>
+                                    <li><code>max_output_tokens=8192</code> - Long-form content</li>
+                                    <li>3 retry attempts with exponential backoff</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Weekly Recap Generation -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">📰</span>
+                            <h4>Weekly Recap Generation</h4>
+                            <span class="line-range">Lines 1300-1650</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="recap-features">
+                                <h5>Output Features:</h5>
+                                <ul>
+                                    <li>1500-2000 word philosophical synthesis</li>
+                                    <li>Weaves ALL films from the week into one narrative</li>
+                                    <li>6-8 blockquotes from philosophers</li>
+                                    <li>Unsplash attribution in frontmatter</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Entry Point -->
+                    <div class="script-section glass-card expandable">
+                        <div class="script-section-header">
+                            <span class="section-icon">🚀</span>
+                            <h4>Main Entry Point</h4>
+                            <span class="line-range">Lines 2350-2478</span>
+                            <button class="expand-btn"><span class="expand-icon">+</span></button>
+                        </div>
+                        <div class="script-section-content">
+                            <div class="main-flow-diagram">
+                                <div class="flow-node start">START</div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-decision">Is it Sunday?</div>
+                                <div class="flow-branches">
+                                    <div class="flow-branch yes">
+                                        <span class="branch-label">Yes</span>
+                                        <div class="flow-node">process_sunday_special()</div>
+                                        <ul>
+                                            <li>Get week's posts</li>
+                                            <li>Fetch Unsplash</li>
+                                            <li>Generate recap</li>
+                                            <li>Save post</li>
+                                        </ul>
+                                    </div>
+                                    <div class="flow-branch no">
+                                        <span class="branch-label">No</span>
+                                        <div class="flow-node">Normal Weekday Flow</div>
+                                        <ul>
+                                            <li>validate_environment</li>
+                                            <li>validate_csv_files</li>
+                                            <li>backup_csv_files</li>
+                                            <li>select_items()</li>
+                                            <li>process_item(movie)</li>
+                                            <li>process_item(series)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="flow-arrow">↓</div>
+                                <div class="flow-node end">EXIT (Git commits changes)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- backup.py -->
+            <div class="script-container" data-aos="fade-up">
+                <div class="script-header glass-card">
+                    <div class="script-icon">💾</div>
+                    <div class="script-info">
+                        <h3>backup.py</h3>
+                        <span class="script-lines">327 lines</span>
+                    </div>
+                    <div class="script-badge">Backup System</div>
+                </div>
+
+                <div class="backup-overview glass-card">
+                    <div class="backup-dirs">
+                        <h5>Backup Directories:</h5>
+                        <div class="dir-grid">
+                            <div class="dir-item"><code>_posts/</code><span>Blog posts</span></div>
+                            <div class="dir-item"><code>assets/img/posts/</code><span>Post images</span></div>
+                            <div class="dir-item"><code>data/</code><span>CSVs, metadata</span></div>
+                            <div class="dir-item"><code>Original/</code><span>CSV backups</span></div>
+                        </div>
+                    </div>
+                    <div class="backup-functions">
+                        <h5>Key Functions:</h5>
+                        <ul>
+                            <li><code>collect_stats()</code> - Scans directories, counts files and bytes</li>
+                            <li><code>create_archive()</code> - Creates .tar.gz with max compression</li>
+                            <li><code>split_archive()</code> - Splits if > 24MB (Gmail limit)</li>
+                            <li><code>send_backup_email()</code> - Sends beautiful HTML email with attachment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: GitHub Actions Workflows -->
+        <section class="section" id="workflows">
+            <div class="section-header">
+                <span class="section-number">05</span>
+                <h2 class="section-title">GitHub Actions Workflows</h2>
+                <p class="section-subtitle">Automated CI/CD pipeline configuration</p>
+            </div>
+
+            <div class="workflows-grid">
+                <!-- daily_post.yml -->
+                <div class="workflow-card glass-card" data-aos="fade-up">
+                    <div class="workflow-header">
+                        <span class="workflow-icon">📝</span>
+                        <div class="workflow-info">
+                            <h4>daily_post.yml</h4>
+                            <span class="workflow-lines">210 lines</span>
+                        </div>
+                        <div class="workflow-badge active">Content Automation</div>
+                    </div>
+                    <div class="workflow-schedule">
+                        <h5>Schedule:</h5>
+                        <div class="cron-list">
+                            <div class="cron-item">
+                                <code>0 3 * * *</code>
+                                <span>08:30 AM IST daily (Sun: recap)</span>
+                            </div>
+                            <div class="cron-item">
+                                <code>0 12 * * 1-6</code>
+                                <span>05:30 PM IST Mon-Sat only</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-steps">
+                        <h5>Steps:</h5>
+                        <div class="steps-timeline">
+                            <div class="timeline-step"><span class="step-icon">📥</span> Checkout</div>
+                            <div class="timeline-step"><span class="step-icon">🐍</span> Setup Python 3.11</div>
+                            <div class="timeline-step"><span class="step-icon">📦</span> Install dependencies</div>
+                            <div class="timeline-step"><span class="step-icon">⏳</span> Random delay (0-20 min)</div>
+                            <div class="timeline-step"><span class="step-icon">📁</span> Create directories</div>
+                            <div class="timeline-step"><span class="step-icon">📋</span> Verify CSVs</div>
+                            <div class="timeline-step highlight"><span class="step-icon">🤖</span> Run main.py</div>
+                            <div class="timeline-step"><span class="step-icon">📝</span> Git config</div>
+                            <div class="timeline-step"><span class="step-icon">📤</span> Commit changes</div>
+                            <div class="timeline-step"><span class="step-icon">🚀</span> Push to main</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- backup.yml -->
+                <div class="workflow-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="workflow-header">
+                        <span class="workflow-icon">💾</span>
+                        <div class="workflow-info">
+                            <h4>backup.yml</h4>
+                            <span class="workflow-lines">85 lines</span>
+                        </div>
+                        <div class="workflow-badge">Data Backup</div>
+                    </div>
+                    <div class="workflow-schedule">
+                        <h5>Schedule:</h5>
+                        <div class="cron-list">
+                            <div class="cron-item">
+                                <code>0 6 */3 * *</code>
+                                <span>~11:30 AM IST every 3 days</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-steps">
+                        <h5>Steps:</h5>
+                        <div class="steps-timeline">
+                            <div class="timeline-step"><span class="step-icon">📥</span> Checkout</div>
+                            <div class="timeline-step"><span class="step-icon">🐍</span> Setup Python 3.11</div>
+                            <div class="timeline-step"><span class="step-icon">📁</span> Verify directories</div>
+                            <div class="timeline-step highlight"><span class="step-icon">💾</span> Run backup.py</div>
+                            <div class="timeline-step"><span class="step-icon">📊</span> Write summary</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pages-deploy.yml -->
+                <div class="workflow-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="workflow-header">
+                        <span class="workflow-icon">🚀</span>
+                        <div class="workflow-info">
+                            <h4>pages-deploy.yml</h4>
+                            <span class="workflow-lines">65 lines</span>
+                        </div>
+                        <div class="workflow-badge">Jekyll Deployment</div>
+                    </div>
+                    <div class="workflow-schedule">
+                        <h5>Trigger:</h5>
+                        <div class="cron-list">
+                            <div class="cron-item">
+                                <code>push to main</code>
+                                <span>When _posts/ changes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="workflow-jobs">
+                        <h5>Jobs:</h5>
+                        <div class="jobs-flow">
+                            <div class="job-card">
+                                <strong>Build Job</strong>
+                                <ul>
+                                    <li>Setup Ruby 3.3</li>
+                                    <li>Configure Pages</li>
+                                    <li>Jekyll build</li>
+                                    <li>Upload artifact</li>
+                                </ul>
+                            </div>
+                            <div class="job-arrow">→</div>
+                            <div class="job-card">
+                                <strong>Deploy Job</strong>
+                                <ul>
+                                    <li>Download artifact</li>
+                                    <li>Deploy to Pages</li>
+                                    <li>Output URL</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Daily Automation Flow -->
+        <section class="section" id="daily-flow">
+            <div class="section-header">
+                <span class="section-number">06</span>
+                <h2 class="section-title">Daily Automation Flow</h2>
+                <p class="section-subtitle">Complete sequence of operations for each run</p>
+            </div>
+
+            <!-- Trigger Time Badge -->
+            <div class="flow-time-badge glass-card-mini" data-aos="fade-up">
+                <span class="time-icon">⏰</span>
+                <span class="time-text">Trigger Time: <strong>08:30 AM IST</strong> or <strong>05:30 PM IST</strong></span>
+            </div>
+
+            <!-- Three Column Participants -->
+            <div class="flow-participants" data-aos="fade-up">
+                <div class="participant-col">
+                    <div class="participant-badge github">⚙️ GitHub Actions</div>
+                </div>
+                <div class="participant-col">
+                    <div class="participant-badge python">🐍 main.py</div>
+                </div>
+                <div class="participant-col">
+                    <div class="participant-badge apis">🌐 External APIs</div>
+                </div>
+            </div>
+
+            <!-- Flow Timeline -->
+            <div class="daily-flow-timeline" data-aos="fade-up">
+                <!-- Step 1 -->
+                <div class="flow-step-row">
+                    <div class="flow-col left">
+                        <div class="flow-actor">GitHub Actions</div>
+                    </div>
+                    <div class="flow-col center">
+                        <div class="flow-line-container">
+                            <div class="flow-dot"></div>
+                            <div class="flow-line-horizontal right"></div>
+                        </div>
+                    </div>
+                    <div class="flow-col right">
+                        <div class="flow-action glass-card-mini">
+                            <span class="action-icon">🚀</span>
+                            <span class="action-text">Trigger workflow</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Connector -->
+                <div class="flow-vertical-line"></div>
+
+                <!-- Step 2 -->
+                <div class="flow-step-row">
+                    <div class="flow-col left">
+                        <div class="flow-actor">GitHub Actions</div>
+                    </div>
+                    <div class="flow-col center">
+                        <div class="flow-line-container">
+                            <div class="flow-dot delay"></div>
+                        </div>
+                    </div>
+                    <div class="flow-col right">
+                        <div class="flow-action glass-card-mini delay">
+                            <span class="action-icon">⏳</span>
+                            <span class="action-text">Random delay (0-20 min)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Connector -->
+                <div class="flow-vertical-line"></div>
+
+                <!-- Step 3 -->
+                <div class="flow-step-row">
+                    <div class="flow-col left">
+                        <div class="flow-actor">main.py</div>
+                    </div>
+                    <div class="flow-col center">
+                        <div class="flow-line-container">
+                            <div class="flow-dot"></div>
+                            <div class="flow-line-horizontal right"></div>
+                        </div>
+                    </div>
+                    <div class="flow-col right">
+                        <div class="flow-action glass-card-mini">
+                            <span class="action-icon">✅</span>
+                            <span class="action-text">Validate environment</span>
+                            <span class="action-target">→ APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Connector -->
+                <div class="flow-vertical-line"></div>
+
+                <!-- Step 4 -->
+                <div class="flow-step-row">
+                    <div class="flow-col left">
+                        <div class="flow-actor">main.py</div>
+                    </div>
+                    <div class="flow-col center">
+                        <div class="flow-line-container">
+                            <div class="flow-dot"></div>
+                        </div>
+                    </div>
+                    <div class="flow-col right">
+                        <div class="flow-action glass-card-mini">
+                            <span class="action-icon">📂</span>
+                            <span class="action-text">Load CSV files & processing queue</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Connector -->
+                <div class="flow-vertical-line"></div>
+
+                <!-- Loop Section -->
+                <div class="flow-loop-section glass-card">
+                    <div class="loop-header">
+                        <span class="loop-icon">🔄</span>
+                        <span class="loop-title">FOR EACH ITEM (2 items: movie + series)</span>
+                    </div>
+                    <div class="loop-steps-grid">
+                        <div class="loop-step">
+                            <span class="loop-num">1</span>
+                            <span class="loop-text">Check Telegram uploads</span>
+                        </div>
+                        <div class="loop-step">
+                            <span class="loop-num">2</span>
+                            <span class="loop-text">Fetch TMDB data</span>
+                        </div>
+                        <div class="loop-step">
+                            <span class="loop-num">3</span>
+                            <span class="loop-text">Download & process images</span>
+                        </div>
+                        <div class="loop-step">
+                            <span class="loop-num">4</span>
+                            <span class="loop-text">Generate content (Gemini)</span>
+                        </div>
+                        <div class="loop-step">
+                            <span class="loop-num">5</span>
+                            <span class="loop-text">Save .md post</span>
+                        </div>
+                        <div class="loop-step">
+                            <span class="loop-num">6</span>
+                            <span class="loop-text">Update history & metadata</span>
+                        </div>
+                        <div class="loop-step">
+                            <span class="loop-num">7</span>
+                            <span class="loop-text">Remove from CSV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Connector -->
+                <div class="flow-vertical-line"></div>
+
+                <!-- Step 5 -->
+                <div class="flow-step-row">
+                    <div class="flow-col left">
+                        <div class="flow-actor">main.py</div>
+                    </div>
+                    <div class="flow-col center">
+                        <div class="flow-line-container">
+                            <div class="flow-dot"></div>
+                            <div class="flow-line-horizontal right"></div>
+                        </div>
+                    </div>
+                    <div class="flow-col right">
+                        <div class="flow-action glass-card-mini">
+                            <span class="action-icon">🔍</span>
+                            <span class="action-text">Pre-check next items & save queue</span>
+                            <span class="action-target">→ APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Connector -->
+                <div class="flow-vertical-line"></div>
+
+                <!-- Step 6 -->
+                <div class="flow-step-row">
+                    <div class="flow-col left">
+                        <div class="flow-actor">GitHub Actions</div>
+                    </div>
+                    <div class="flow-col center">
+                        <div class="flow-line-container">
+                            <div class="flow-dot"></div>
+                        </div>
+                    </div>
+                    <div class="flow-col right">
+                        <div class="flow-action glass-card-mini">
+                            <span class="action-icon">📤</span>
+                            <span class="action-text">Git add → commit → push</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vertical Connector -->
+                <div class="flow-vertical-line"></div>
+
+                <!-- Step 7 - Final -->
+                <div class="flow-step-row final">
+                    <div class="flow-col left">
+                        <div class="flow-actor">—</div>
+                    </div>
+                    <div class="flow-col center">
+                        <div class="flow-line-container">
+                            <div class="flow-dot success"></div>
+                            <div class="flow-line-horizontal right"></div>
+                        </div>
+                    </div>
+                    <div class="flow-col right">
+                        <div class="flow-action glass-card-mini success">
+                            <span class="action-icon">🚀</span>
+                            <span class="action-text">Triggers Jekyll build & deploy</span>
+                            <span class="action-target">→ pages-deploy.yml</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Sunday Weekly Recap Flow -->
+        <section class="section" id="sunday-flow">
+            <div class="section-header">
+                <span class="section-number">07</span>
+                <h2 class="section-title">Sunday Weekly Recap Flow</h2>
+                <p class="section-subtitle">The philosophical synthesis process</p>
+            </div>
+
+            <div class="sunday-flow-container" data-aos="fade-up">
+                <div class="sunday-timeline">
+                    <div class="sunday-step glass-card">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>🔍 Detect Sunday</h4>
+                            <p><code>is_sunday()</code> returns True based on TRIGGER_SCHEDULE or datetime.weekday()</p>
+                        </div>
+                    </div>
+
+                    <div class="sunday-connector"></div>
+
+                    <div class="sunday-step glass-card">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>📋 Get Week's Posts</h4>
+                            <p>Parse history.log, filter Monday 00:00 → Sunday 23:59, exclude recap entries. Minimum 3 posts required.</p>
+                        </div>
+                    </div>
+
+                    <div class="sunday-connector"></div>
+
+                    <div class="sunday-step glass-card">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>🔎 Generate Search Query</h4>
+                            <p>Gemini analyzes titles → outputs 2-4 word philosophical query<br>Example: "existential contemplation"</p>
+                        </div>
+                    </div>
+
+                    <div class="sunday-connector"></div>
+
+                    <div class="sunday-step glass-card">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>📸 Fetch Unsplash Image</h4>
+                            <p>Search /search/photos?orientation=landscape, filter not in used_unsplash.json, select random from top 10</p>
+                        </div>
+                    </div>
+
+                    <div class="sunday-connector"></div>
+
+                    <div class="sunday-step glass-card">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h4>🖼️ Process Hero Image</h4>
+                            <p>Convert to RGB → Resize to 1920px → Compress to ≤500KB WebP → Save as week{N}_{year}_recap_hero.webp</p>
+                        </div>
+                    </div>
+
+                    <div class="sunday-connector"></div>
+
+                    <div class="sunday-step glass-card">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h4>🧠 Generate Recap Content</h4>
+                            <p>Gemini creates 1500-2000 word philosophical synthesis weaving ALL films into one narrative with 6-8 blockquotes</p>
+                        </div>
+                    </div>
+
+                    <div class="sunday-connector"></div>
+
+                    <div class="sunday-step glass-card">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h4>💾 Save Post</h4>
+                            <p>Filename: YYYY-MM-DD-weekly-recap-week-N.md<br>Sanitize title, write to _posts/</p>
+                        </div>
+                    </div>
+
+                    <div class="sunday-connector"></div>
+
+                    <div class="sunday-step glass-card final">
+                        <div class="step-number">8</div>
+                        <div class="step-content">
+                            <h4>📜 Update History</h4>
+                            <p>Entry: recap_w{N}_{year}<br>Prevents duplicate recap generation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Backup System -->
+        <section class="section" id="backup-system">
+            <div class="section-header">
+                <span class="section-number">08</span>
+                <h2 class="section-title">Backup System</h2>
+                <p class="section-subtitle">Automated data protection every 3 days</p>
+            </div>
+
+            <div class="backup-flow-container" data-aos="fade-up">
+                <div class="backup-flow glass-card">
+                    <div class="backup-header">
+                        <span class="backup-icon">💾</span>
+                        <h4>backup.py Execution</h4>
+                        <span class="backup-schedule">Every 3 days at 06:00 UTC (~11:30 AM IST)</span>
+                    </div>
+
+                    <div class="backup-steps">
+                        <div class="backup-step">
+                            <span class="b-num">1</span>
+                            <span class="b-text">Validate SMTP credentials</span>
+                        </div>
+                        <div class="backup-step">
+                            <span class="b-num">2</span>
+                            <span class="b-text">Scan directories: _posts/, assets/img/posts/, data/, Original/</span>
+                        </div>
+                        <div class="backup-step">
+                            <span class="b-num">3</span>
+                            <span class="b-text">Create archive: whatsup_backup_YYYY-MM-DD_HHMM.tar.gz (gzip level 9)</span>
+                        </div>
+                        <div class="backup-step">
+                            <span class="b-num">4</span>
+                            <div class="b-text">
+                                Check size:
+                                <div class="size-branches">
+                                    <span>&lt; 24MB → Single file</span>
+                                    <span>&gt; 24MB → Split into .part01, .part02...</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backup-step">
+                            <span class="b-num">5</span>
+                            <span class="b-text">Send email(s) with HTML summary + archive attachment(s)</span>
+                        </div>
+                        <div class="backup-step">
+                            <span class="b-num">6</span>
+                            <span class="b-text">Cleanup temporary files</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Preview -->
+                <div class="email-preview glass-card" data-aos="fade-up">
+                    <div class="email-header">
+                        <span class="email-icon">✉️</span>
+                        <div class="email-subject">
+                            <strong>Subject:</strong> 💾 What's Up? Backup — Feb 15, 2026
+                        </div>
+                    </div>
+                    <div class="email-body">
+                        <div class="email-section">
+                            <h5>📊 Backup Summary</h5>
+                            <table class="email-table">
+                                <tr><th>Directory</th><th>Files</th><th>Size</th></tr>
+                                <tr><td>_posts/</td><td>150</td><td>2.5 MB</td></tr>
+                                <tr><td>assets/img/posts</td><td>600</td><td>180 MB</td></tr>
+                                <tr><td>data/</td><td>6</td><td>1.2 MB</td></tr>
+                                <tr><td>Original/</td><td>4</td><td>0.5 MB</td></tr>
+                                <tr class="total"><td>Total</td><td>760</td><td>184.2 MB</td></tr>
+                            </table>
+                        </div>
+                        <div class="email-section">
+                            <h5>📦 Archive Info</h5>
+                            <p>Size: 45.3 MB (gzip level 9)<br>Compression ratio: 75.4% smaller</p>
+                        </div>
+                        <div class="email-section">
+                            <h5>🔄 Restore Instructions</h5>
+                            <ol>
+                                <li>Download .tar.gz attachment</li>
+                                <li><code>tar -xzf whatsup_backup_*.tar.gz</code></li>
+                                <li>Copy folders to project root</li>
+                            </ol>
+                        </div>
+                        <div class="email-attachment">
+                            <span class="attachment-icon">📎</span>
+                            <span>whatsup_backup_2026-02-15_0600.tar.gz</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: API Integrations -->
+        <section class="section" id="apis">
+            <div class="section-header">
+                <span class="section-number">09</span>
+                <h2 class="section-title">API Integrations</h2>
+                <p class="section-subtitle">External services powering the automation</p>
+            </div>
+
+            <div class="api-grid">
+                <!-- TMDB API -->
+                <div class="api-card glass-card" data-aos="fade-up">
+                    <div class="api-header">
+                        <span class="api-icon">🎬</span>
+                        <h4>TMDB API</h4>
+                    </div>
+                    <div class="api-base">
+                        <strong>Base URL:</strong> <code>https://api.themoviedb.org/3</code>
+                    </div>
+                    <div class="api-endpoints">
+                        <h5>Endpoints:</h5>
+                        <div class="endpoint">
+                            <code>/find/{imdb_id}</code>
+                            <span>Convert IMDb ID to TMDB ID</span>
+                        </div>
+                        <div class="endpoint">
+                            <code>/movie/{id}</code>
+                            <span>Get movie details</span>
+                        </div>
+                        <div class="endpoint">
+                            <code>/tv/{id}</code>
+                            <span>Get TV show details</span>
+                        </div>
+                    </div>
+                    <div class="api-images">
+                        <h5>Image CDN:</h5>
+                        <code class="small">https://image.tmdb.org/t/p/original/{file_path}</code>
+                    </div>
+                </div>
+
+                <!-- Gemini API -->
+                <div class="api-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="api-header">
+                        <span class="api-icon">🧠</span>
+                        <h4>Google Gemini API</h4>
+                    </div>
+                    <div class="api-base">
+                        <strong>SDK:</strong> <code>google-genai</code> Python package
+                    </div>
+                    <div class="api-model">
+                        <strong>Model:</strong> <code>gemini-2.5-flash</code>
+                    </div>
+                    <div class="api-features">
+                        <h5>Features Used:</h5>
+                        <ul>
+                            <li>Blog post generation (800-1200 words)</li>
+                            <li>Weekly recap synthesis (1500-2000 words)</li>
+                            <li>Unsplash search query generation</li>
+                            <li>Image prompt generation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Unsplash API -->
+                <div class="api-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="api-header">
+                        <span class="api-icon">📸</span>
+                        <h4>Unsplash API</h4>
+                    </div>
+                    <div class="api-base">
+                        <strong>Base URL:</strong> <code>https://api.unsplash.com</code>
+                    </div>
+                    <div class="api-endpoints">
+                        <h5>Endpoint:</h5>
+                        <div class="endpoint">
+                            <code>/search/photos</code>
+                            <span>Search for images</span>
+                        </div>
+                    </div>
+                    <div class="api-params">
+                        <h5>Parameters:</h5>
+                        <ul>
+                            <li><code>query</code> - philosophical query</li>
+                            <li><code>orientation=landscape</code></li>
+                            <li><code>content_filter=high</code></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Telegram API -->
+                <div class="api-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="api-header">
+                        <span class="api-icon">✈️</span>
+                        <h4>Telegram Bot API</h4>
+                    </div>
+                    <div class="api-base">
+                        <strong>Base URL:</strong> <code>https://api.telegram.org/bot{token}</code>
+                    </div>
+                    <div class="api-endpoints">
+                        <h5>Endpoints:</h5>
+                        <div class="endpoint"><code>/sendMessage</code><span>Send alerts</span></div>
+                        <div class="endpoint"><code>/getUpdates</code><span>Poll for photos</span></div>
+                        <div class="endpoint"><code>/getFile</code><span>Download path</span></div>
+                        <div class="endpoint"><code>/deleteMessage</code><span>Cleanup</span></div>
+                    </div>
+                </div>
+
+                <!-- Gmail SMTP -->
+                <div class="api-card glass-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="api-header">
+                        <span class="api-icon">📧</span>
+                        <h4>Gmail SMTP</h4>
+                    </div>
+                    <div class="api-base">
+                        <strong>Server:</strong> <code>smtp.gmail.com:587</code>
+                    </div>
+                    <div class="api-auth">
+                        <strong>Auth:</strong> App Password (not regular password)
+                    </div>
+                    <div class="api-usage">
+                        <h5>Usage:</h5>
+                        <ul>
+                            <li>Backup email delivery</li>
+                            <li>Alert notifications</li>
+                            <li>Manual fallback requests</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Error Handling -->
+        <section class="section" id="error-handling">
+            <div class="section-header">
+                <span class="section-number">10</span>
+                <h2 class="section-title">Error Handling & Fallbacks</h2>
+                <p class="section-subtitle">Resilient systems for edge cases</p>
+            </div>
+
+            <div class="error-grid">
+                <!-- API Error Handling -->
+                <div class="error-card glass-card" data-aos="fade-up">
+                    <div class="error-header">
+                        <span class="error-icon">🔄</span>
+                        <h4>API Error Handling</h4>
+                    </div>
+                    <div class="error-content">
+                        <h5>Gemini API:</h5>
+                        <ul>
+                            <li>3 retry attempts max</li>
+                            <li>Exponential backoff on 503/429 errors</li>
+                            <li>Wait: 10s → 20s → 40s between retries</li>
+                        </ul>
+                        <h5>TMDB API:</h5>
+                        <ul>
+                            <li>Graceful degradation on failure</li>
+                            <li>Returns None for web search fallback</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Missing Images Fallback -->
+                <div class="error-card glass-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="error-header">
+                        <span class="error-icon">🖼️</span>
+                        <h4>Missing Images Fallback</h4>
+                    </div>
+                    <div class="error-content">
+                        <h5>Telegram Manual Upload System:</h5>
+                        <ol>
+                            <li>Pre-check identifies missing images</li>
+                            <li>Sends Telegram + Email alerts</li>
+                            <li>Upload with captions: HERO_{imdb_id}, IMG1_{imdb_id}...</li>
+                            <li>Next run checks for uploads before TMDB</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Series Depletion -->
+                <div class="error-card glass-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="error-header">
+                        <span class="error-icon">📺</span>
+                        <h4>Series Depletion</h4>
+                    </div>
+                    <div class="error-content">
+                        <p>When series.csv is empty:</p>
+                        <div class="code-block">
+                            <code>if available_series.empty:</code><br>
+                            <code>&nbsp;&nbsp;# Switch to double movie mode</code><br>
+                            <code>&nbsp;&nbsp;# Select 2 movies instead</code>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Deduplication Reset -->
+                <div class="error-card glass-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="error-header">
+                        <span class="error-icon">🔁</span>
+                        <h4>Image Deduplication Reset</h4>
+                    </div>
+                    <div class="error-content">
+                        <p>When all images for an item have been used:</p>
+                        <div class="code-block">
+                            <code>if not available_backdrops:</code><br>
+                            <code>&nbsp;&nbsp;print("All images used!")</code><br>
+                            <code>&nbsp;&nbsp;available_backdrops = backdrops  # Reset</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Environment Variables -->
+        <section class="section" id="env-vars">
+            <div class="section-header">
+                <span class="section-number">11</span>
+                <h2 class="section-title">Environment Variables</h2>
+                <p class="section-subtitle">Configuration secrets and settings</p>
+            </div>
+
+            <div class="env-vars-container" data-aos="fade-up">
+                <!-- Required -->
+                <div class="env-group glass-card">
+                    <div class="env-group-header required">
+                        <span class="env-badge">Required</span>
+                        <h4>Automation fails without these</h4>
+                    </div>
+                    <div class="env-table">
+                        <div class="env-row header">
+                            <span>Variable</span>
+                            <span>Purpose</span>
+                            <span>Source</span>
+                        </div>
+                        <div class="env-row">
+                            <code>GEMINI_API_KEY</code>
+                            <span>Google Gemini AI</span>
+                            <span>Google AI Studio</span>
+                        </div>
+                        <div class="env-row">
+                            <code>TMDB_API_KEY</code>
+                            <span>Movie database</span>
+                            <span>TMDB Account</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Optional -->
+                <div class="env-group glass-card">
+                    <div class="env-group-header optional">
+                        <span class="env-badge">Optional</span>
+                        <h4>Features disabled without these</h4>
+                    </div>
+                    <div class="env-table">
+                        <div class="env-row header">
+                            <span>Variable</span>
+                            <span>Purpose</span>
+                            <span>Source</span>
+                        </div>
+                        <div class="env-row">
+                            <code>UNSPLASH_ACCESS_KEY</code>
+                            <span>Sunday recap images</span>
+                            <span>Unsplash Developer</span>
+                        </div>
+                        <div class="env-row">
+                            <code>TELEGRAM_BOT_TOKEN</code>
+                            <span>Manual upload fallback</span>
+                            <span>BotFather</span>
+                        </div>
+                        <div class="env-row">
+                            <code>TELEGRAM_CHAT_ID</code>
+                            <span>Target chat for alerts</span>
+                            <span>Bot chat</span>
+                        </div>
+                        <div class="env-row">
+                            <code>SMTP_EMAIL</code>
+                            <span>Email sender address</span>
+                            <span>Gmail</span>
+                        </div>
+                        <div class="env-row">
+                            <code>SMTP_PASSWORD</code>
+                            <span>Email app password</span>
+                            <span>Gmail App Passwords</span>
+                        </div>
+                        <div class="env-row">
+                            <code>NOTIFICATION_EMAIL</code>
+                            <span>Recipient for alerts</span>
+                            <span>Any email</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GitHub Actions Specific -->
+                <div class="env-group glass-card">
+                    <div class="env-group-header github">
+                        <span class="env-badge">GitHub Actions</span>
+                        <h4>CI/CD specific variables</h4>
+                    </div>
+                    <div class="env-table">
+                        <div class="env-row header">
+                            <span>Variable</span>
+                            <span>Purpose</span>
+                        </div>
+                        <div class="env-row">
+                            <code>GH_PAT</code>
+                            <span>Personal Access Token for push</span>
+                        </div>
+                        <div class="env-row">
+                            <code>TRIGGER_SCHEDULE</code>
+                            <span>Cron expression that triggered run</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: File Structure -->
+        <section class="section" id="file-structure">
+            <div class="section-header">
+                <span class="section-number">12</span>
+                <h2 class="section-title">File Structure Reference</h2>
+                <p class="section-subtitle">Complete project organization</p>
+            </div>
+
+            <div class="file-tree-container glass-card" data-aos="fade-up">
+                <div class="file-tree">
+                    <div class="tree-item folder root">
+                        <span class="folder-icon">📁</span>
+                        <span class="item-name">WHATSUP/</span>
+                    </div>
+                    
+                    <div class="tree-branch">
+                        <div class="tree-item folder">
+                            <span class="folder-icon">📁</span>
+                            <span class="item-name">.github/workflows/</span>
+                        </div>
+                        <div class="tree-children">
+                            <div class="tree-item file"><span class="file-icon">📄</span> daily_post.yml <span class="file-desc">Content automation</span></div>
+                            <div class="tree-item file"><span class="file-icon">📄</span> backup.yml <span class="file-desc">Data backup</span></div>
+                            <div class="tree-item file"><span class="file-icon">📄</span> pages-deploy.yml <span class="file-desc">Jekyll deployment</span></div>
+                        </div>
+                    </div>
+
+                    <div class="tree-branch">
+                        <div class="tree-item folder">
+                            <span class="folder-icon">📁</span>
+                            <span class="item-name">scripts/</span>
+                        </div>
+                        <div class="tree-children">
+                            <div class="tree-item file"><span class="file-icon">🐍</span> main.py <span class="file-desc">Core automation (2478 lines)</span></div>
+                            <div class="tree-item file"><span class="file-icon">🐍</span> backup.py <span class="file-desc">Backup system (327 lines)</span></div>
+                            <div class="tree-item file"><span class="file-icon">📄</span> requirements.txt <span class="file-desc">Python dependencies</span></div>
+                        </div>
+                    </div>
+
+                    <div class="tree-branch">
+                        <div class="tree-item folder">
+                            <span class="folder-icon">📁</span>
+                            <span class="item-name">data/</span>
+                        </div>
+                        <div class="tree-children">
+                            <div class="tree-item file"><span class="file-icon">📊</span> movies.csv <span class="file-desc">Source movies</span></div>
+                            <div class="tree-item file"><span class="file-icon">📊</span> series.csv <span class="file-desc">Source series</span></div>
+                            <div class="tree-item file"><span class="file-icon">📜</span> history.log <span class="file-desc">Processed items log</span></div>
+                            <div class="tree-item file"><span class="file-icon">📋</span> metadata_db.json <span class="file-desc">Post metadata</span></div>
+                            <div class="tree-item file"><span class="file-icon">📋</span> processing_queue.json <span class="file-desc">Pre-validated items</span></div>
+                            <div class="tree-item file"><span class="file-icon">📋</span> used_images.json <span class="file-desc">TMDB deduplication</span></div>
+                            <div class="tree-item file"><span class="file-icon">📋</span> used_unsplash.json <span class="file-desc">Unsplash deduplication</span></div>
+                        </div>
+                    </div>
+
+                    <div class="tree-branch">
+                        <div class="tree-item folder">
+                            <span class="folder-icon">📁</span>
+                            <span class="item-name">_posts/</span>
+                        </div>
+                        <div class="tree-children">
+                            <div class="tree-item file"><span class="file-icon">📝</span> 2026-02-02-rogue-one.md</div>
+                            <div class="tree-item file"><span class="file-icon">📝</span> 2026-02-02-game-of-thrones.md</div>
+                            <div class="tree-item file more"><span class="file-icon">...</span> More markdown posts</div>
+                        </div>
+                    </div>
+
+                    <div class="tree-branch">
+                        <div class="tree-item folder">
+                            <span class="folder-icon">📁</span>
+                            <span class="item-name">assets/img/posts/</span>
+                        </div>
+                        <div class="tree-children">
+                            <div class="tree-item file"><span class="file-icon">🖼️</span> tt3748528_hero.webp</div>
+                            <div class="tree-item file"><span class="file-icon">🖼️</span> tt3748528_1.webp</div>
+                            <div class="tree-item file more"><span class="file-icon">...</span> More WebP images</div>
+                        </div>
+                    </div>
+
+                    <div class="tree-branch root-files">
+                        <div class="tree-item file"><span class="file-icon">⚙️</span> _config.yml <span class="file-desc">Jekyll configuration</span></div>
+                        <div class="tree-item file"><span class="file-icon">💎</span> Gemfile <span class="file-desc">Ruby dependencies</span></div>
+                        <div class="tree-item file"><span class="file-icon">🏠</span> index.html <span class="file-desc">Site homepage</span></div>
+                        <div class="tree-item file"><span class="file-icon">📖</span> README.md <span class="file-desc">Project readme</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 13: Troubleshooting -->
+        <section class="section" id="troubleshooting">
+            <div class="section-header">
+                <span class="section-number">13</span>
+                <h2 class="section-title">Troubleshooting Guide</h2>
+                <p class="section-subtitle">Common issues and solutions</p>
+            </div>
+
+            <div class="troubleshoot-grid">
+                <div class="trouble-card glass-card expandable" data-aos="fade-up">
+                    <div class="trouble-header">
+                        <span class="trouble-icon">❌</span>
+                        <h4>"No items available to process"</h4>
+                        <button class="expand-btn"><span class="expand-icon">+</span></button>
+                    </div>
+                    <div class="trouble-content">
+                        <p><strong>Cause:</strong> Both CSV files are empty or all items processed</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul>
+                            <li>Add new items to movies.csv/series.csv</li>
+                            <li>Check history.log for processed items</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="trouble-card glass-card expandable" data-aos="fade-up" data-aos-delay="100">
+                    <div class="trouble-header">
+                        <span class="trouble-icon">⚠️</span>
+                        <h4>"Gemini API error: 503/429"</h4>
+                        <button class="expand-btn"><span class="expand-icon">+</span></button>
+                    </div>
+                    <div class="trouble-content">
+                        <p><strong>Cause:</strong> API overloaded or rate limit</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul>
+                            <li>Automatic retry with exponential backoff</li>
+                            <li>Wait and rerun manually if persists</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="trouble-card glass-card expandable" data-aos="fade-up" data-aos-delay="200">
+                    <div class="trouble-header">
+                        <span class="trouble-icon">🖼️</span>
+                        <h4>"No high-quality images found"</h4>
+                        <button class="expand-btn"><span class="expand-icon">+</span></button>
+                    </div>
+                    <div class="trouble-content">
+                        <p><strong>Cause:</strong> TMDB has no landscape backdrops ≥1920px</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul>
+                            <li>System sends Telegram/email alert</li>
+                            <li>Upload manually with caption HERO_{imdb_id}</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="trouble-card glass-card expandable" data-aos="fade-up" data-aos-delay="300">
+                    <div class="trouble-header">
+                        <span class="trouble-icon">🔑</span>
+                        <h4>"Missing required environment variables"</h4>
+                        <button class="expand-btn"><span class="expand-icon">+</span></button>
+                    </div>
+                    <div class="trouble-content">
+                        <p><strong>Cause:</strong> GitHub Secrets not configured</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul>
+                            <li>Go to Repository Settings → Secrets → Actions</li>
+                            <li>Add missing secrets</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="trouble-card glass-card expandable" data-aos="fade-up" data-aos-delay="400">
+                    <div class="trouble-header">
+                        <span class="trouble-icon">📤</span>
+                        <h4>"Push rejected - no changes"</h4>
+                        <button class="expand-btn"><span class="expand-icon">+</span></button>
+                    </div>
+                    <div class="trouble-content">
+                        <p><strong>Cause:</strong> No new content generated</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul>
+                            <li>Check workflow logs for errors</li>
+                            <li>Verify CSV files have unprocessed items</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="trouble-card glass-card expandable" data-aos="fade-up" data-aos-delay="500">
+                    <div class="trouble-header">
+                        <span class="trouble-icon">📰</span>
+                        <h4>"Weekly recap: Only X posts this week"</h4>
+                        <button class="expand-btn"><span class="expand-icon">+</span></button>
+                    </div>
+                    <div class="trouble-content">
+                        <p><strong>Cause:</strong> Fewer than 3 posts generated this week</p>
+                        <p><strong>Solution:</strong></p>
+                        <ul>
+                            <li>Recap requires minimum 3 posts</li>
+                            <li>Will skip if threshold not met</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Manual Commands -->
+            <div class="manual-commands glass-card" data-aos="fade-up">
+                <h4>🛠️ Manual Intervention Commands</h4>
+                <div class="commands-grid">
+                    <div class="command-item">
+                        <h5>Run locally (testing):</h5>
+                        <code>cd scripts && python main.py</code>
+                    </div>
+                    <div class="command-item">
+                        <h5>Skip random delay:</h5>
+                        <code>python main.py --skip-delay</code>
+                    </div>
+                    <div class="command-item">
+                        <h5>Trigger workflow manually:</h5>
+                        <p>Actions tab → Select workflow → "Run workflow"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer glass-card">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">🎬</span>
+                <span class="footer-title">What's Up?</span>
+                <p class="footer-tagline">Autonomous Philosophical Media Blog Engine</p>
+            </div>
+            <div class="footer-stats">
+                <div class="footer-stat">
+                    <span class="stat-value">~3,500+</span>
+                    <span class="stat-label">Lines of Code</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="stat-value">25</span>
+                    <span class="stat-label">Posts/Week</span>
+                </div>
+                <div class="footer-stat">
+                    <span class="stat-value">5</span>
+                    <span class="stat-label">API Integrations</span>
+                </div>
+            </div>
+            <div class="footer-meta">
+                <p>Documentation generated: February 15, 2026</p>
+                <p>Visualization created with Apple Liquid Glass UI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top glass-card-mini" aria-label="Back to top">
+        <span>↑</span>
+    </button>
+
+    <!-- Modal Container -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close" aria-label="Close modal">×</button>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
